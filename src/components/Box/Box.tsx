@@ -14,7 +14,7 @@ import {
   BorderProps,
 } from 'styled-system';
 
-export type BoxProps = SpaceProps | LayoutProps | ColorProps | FlexboxProps;
+export type BoxProps = SpaceProps | LayoutProps | ColorProps | FlexboxProps | BorderProps;
 
 const Box = styled.div<BoxProps>(
   {

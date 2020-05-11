@@ -1,9 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-
 import Flask from './assets/icons/flask.svg';
 import Groceries from './assets/icons/groceries.svg';
-
 import Home from './scenes/Home';
 
 const Blah = () => (
@@ -20,6 +18,7 @@ export interface AppRoutes {
   component: any;
   routes?: AppRoutes[];
 }
+
 export const APP_ROUTES: AppRoutes[] = [
   {
     path: '/blah',
