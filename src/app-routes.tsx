@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom';
 import Flask from './assets/icons/flask.svg';
 import Groceries from './assets/icons/groceries.svg';
 import Home from './scenes/Home';
+import { RecipeCreator } from './scenes';
 
 const Blah = () => (
   <div>
@@ -32,7 +33,7 @@ export const APP_ROUTES: AppRoutes[] = [
     label: 'Home',
     order: 0,
     img: Flask,
-    component: Home,
+    component: RecipeCreator,
   },
 ];
 

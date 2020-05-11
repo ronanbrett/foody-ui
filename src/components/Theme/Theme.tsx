@@ -77,5 +77,5 @@ const theme = {
   },
 };
 
-const Theme = (props: any) => <ThemeProvider {...props} theme={theme} />;
+const Theme = (props: any) => <ThemeProvider theme={theme} {...props} />;
 export default Theme;
