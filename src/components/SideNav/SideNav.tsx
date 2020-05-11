@@ -16,14 +16,14 @@ const coolBoxKeyframes = keyframes`
     background: blue;
   }`;
 
-const Side = styled(Box)<{ backgroundColor: string }>({
+const SideNavWrapper = styled(Box)<{ backgroundColor: string }>({
   display: 'flex',
   width: '120px',
   justifyContent: 'center',
   alignItems: 'flex-start',
 });
 
-const Menu = styled(Card)<{ px: number; py: number; borderRadius: number }>({
+const MenuWrapper = styled(Box)<{ px: number; py: number; borderRadius: number }>({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
@@ -44,8 +44,8 @@ const Link = styled(NavLink)<SpaceProps>(
 
 function SideNav({ routes }: SideNavProps) {
   return (
-    <Side backgroundColor="gray">
-      <Menu px={3} py={4} borderRadius={24}>
+    <SideNavWrapper backgroundColor="gray">
+      <MenuWrapper px={3} py={4} borderRadius={24} backgroundColor="white">
         {routes
           .sort((a, b) => (a.order > b.order ? 1 : -1))
           .map((route, index) => (
@@ -53,8 +53,8 @@ function SideNav({ routes }: SideNavProps) {
               <img alt={route.label} src={route.img} />
             </Link>
           ))}
-      </Menu>
-    </Side>
+      </MenuWrapper>
+    </SideNavWrapper>
   );
 }
 
