@@ -7,6 +7,11 @@ import './assets/main.css';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faCircle } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faCircle);
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
