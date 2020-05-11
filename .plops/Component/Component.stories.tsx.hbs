@@ -1,0 +1,17 @@
+import React from 'react';
+
+import {{pascalCase name}} from './{{pascalCase name}}';
+
+import { action } from '@storybook/addon-actions';
+import { withKnobs } from '@storybook/addon-knobs';
+
+export default {
+  title: 'Components/{{pascalCase name}}',
+  decorators: [withKnobs],
+  component: {{pascalCase name}},
+};
+
+
+export const Default = () => (
+  <{{pascalCase name}}></{{pascalCase name}}>
+);

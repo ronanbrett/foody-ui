@@ -7,20 +7,16 @@ import { withKnobs } from '@storybook/addon-knobs';
 import Button from './Button';
 
 export default {
-  title: 'Button',
+  title: 'Components/Button',
   decorators: [withKnobs],
   component: Button,
 };
 
-export const PrimaryText = ({ title }: { title: string }) => (
+export const Default = ({ title }: { title: string }) => (
   <Button variant="primary" onClick={action('clicked')}>
     Hello Button
   </Button>
 );
-
-PrimaryText.story = {
-  title: 'Hello',
-};
 
 export const PrimaryIcon = () => (
   <Button variant="primary" onClick={action('clicked')}>

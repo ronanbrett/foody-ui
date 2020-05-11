@@ -1,22 +1,25 @@
 import styled from 'styled-components';
 import Box from '../Box';
-import { variant } from 'styled-system';
+import { variant, border, BorderProps } from 'styled-system';
 
 interface CardProps {
   isPrimary?: boolean;
-  size?: 'xl' | 'l' | 'm' | 's' | 'xs';
+  type?: 'xl' | 'l' | 'm' | 's' | 'xs';
   children?: any;
 }
 
-const isPrimary = (props: CardProps) => `background-color: ${props.isPrimary ? 'red' : 'white'};`;
+type Props = CardProps & BorderProps;
 
-const Card = styled(Box)<CardProps>(
+const isPrimary = (props: Props) => `background-color: ${props.isPrimary ? 'red' : 'white'};`;
+
+const Card = styled(Box)<Props>(
   {
     boxShadow: '5px 5px 20px 0 #EEEEEE, -5px -5px 20px 0 #FFFFFF',
   },
   isPrimary,
+  border,
   variant({
-    prop: 'size',
+    prop: 'type',
     variants: {
       xl: {
         minHeight: '400px',
@@ -45,7 +48,7 @@ Card.defaultProps = {
   px: '4',
   py: '3',
   borderRadius: '25px',
-  size: 'xs',
+  type: 'xs',
 };
 
 export default Card;

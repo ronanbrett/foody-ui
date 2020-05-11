@@ -12,19 +12,24 @@ import {
   SpaceProps,
   border,
   BorderProps,
+  typography,
+  TypographyProps,
+  compose,
 } from 'styled-system';
 
-export type BoxProps = SpaceProps | LayoutProps | ColorProps | FlexboxProps | BorderProps;
+export type BoxProps = SpaceProps & LayoutProps & ColorProps & FlexboxProps & TypographyProps;
 
 const Box = styled.div<BoxProps>(
   {
     boxSizing: 'content-box',
   },
-  space,
-  color,
-  layout,
-  flexbox,
-  border,
+  compose(
+    space,
+    layout,
+    typography,
+    color,
+    flexbox,
+  ),
 );
 
 export default Box;

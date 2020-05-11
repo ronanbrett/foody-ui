@@ -23,7 +23,7 @@ const SideNavWrapper = styled(Box)<{ backgroundColor: string }>({
   alignItems: 'flex-start',
 });
 
-const MenuWrapper = styled(Box)<{ px: number; py: number; borderRadius: number }>({
+const MenuWrapper = styled(Card)<{ px: number; py: number; borderRadius: number }>({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
@@ -45,7 +45,7 @@ const Link = styled(NavLink)<SpaceProps>(
 function SideNav({ routes }: SideNavProps) {
   return (
     <SideNavWrapper backgroundColor="gray">
-      <MenuWrapper px={3} py={4} borderRadius={24} backgroundColor="white">
+      <MenuWrapper type="m" as="section" px={3} py={4} borderRadius={24} backgroundColor="white">
         {routes
           .sort((a, b) => (a.order > b.order ? 1 : -1))
           .map((route, index) => (

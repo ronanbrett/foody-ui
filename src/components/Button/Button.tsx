@@ -16,17 +16,6 @@ const Button = styled.button<{ variant: string }>(
   },
   variant({
     scale: 'buttons',
-    variants: {
-      primary: {
-        color: 'white',
-        bg: 'black',
-      },
-      inverted: {
-        color: 'black',
-        bg: 'white',
-        border: '1px solid black',
-      },
-    },
   }),
 );
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from './Card';
 export default {
-  title: 'Card',
+  title: 'Components/Card',
   component: Card,
 };
 

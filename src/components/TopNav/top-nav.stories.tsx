@@ -5,7 +5,7 @@ import TopNav from './index';
 
 export default {
   component: TopNav,
-  title: 'Nav',
+  title: 'Components/Nav/Top',
   // Our exports that end in "Data" are not stories.
 };
 
