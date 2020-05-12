@@ -23,7 +23,7 @@ export interface AppRoutes {
 export const APP_ROUTES: AppRoutes[] = [
   {
     path: '/blah',
-    component: Blah,
+    component: Home,
     order: 1,
     img: Groceries,
     label: 'Blah',
